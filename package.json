@@ -1,0 +1,48 @@
+{
+  "name": "blogfolio_frontend",
+  "version": "1.0.0",
+  "description": "A server rendered React.js blog and portfolio site frontend",
+  "main": "./src/app-client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run build && babel-node src/server.js",
+    "start:dev": "export NODE_ENV=development && npm run build:dev && nodemon --exec babel-node -- src/server.js",
+    "build:dev": "webpack -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgading/blogfolio_frontend.git"
+  },
+  "author": "Daniel Gading",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dgading/blogfolio_frontend/issues"
+  },
+  "homepage": "https://github.com/dgading/blogfolio_frontend#readme",
+  "dependencies": {
+    "axios": "^0.16.1",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.3",
+    "ejs": "^2.5.6",
+    "express": "^4.15.3",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "file-loader": "^0.11.1",
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7",
+    "postcss": "^6.0.1",
+    "postcss-cssnext": "^2.11.0",
+    "postcss-import": "^10.0.0",
+    "postcss-loader": "^2.0.5",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.1",
+    "react-transition-group": "^1.1.3",
+    "style-loader": "^0.18.1",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
