@@ -1,0 +1,9 @@
+body {
+  background-color: var(--smokyBlack);
+}
+
+.app-content {
+  width: 80%;
+  max-width: 1600px;
+  margin: 0 auto;
+}

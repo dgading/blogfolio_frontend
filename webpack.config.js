@@ -13,8 +13,6 @@ module.exports = {
   },
   module: {
     rules: [
-      {test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ },
-      {test: /\.jsx$/, use: 'babel-loader', exclude: /node_modules/ },
       {
         test: /\.css$/,
         use: ExtractTextPlugin.extract({
@@ -25,6 +23,9 @@ module.exports = {
           ],
         }),
       },
+      {test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ },
+      {test: /\.jsx$/, use: 'babel-loader', exclude: /node_modules/ },
+      
     ],
   },
   devServer: {

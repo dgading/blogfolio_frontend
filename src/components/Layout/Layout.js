@@ -1,13 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
+import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
 export const Layout = (props) => (
   <div className="app-container">
-    <header className="app-header">
-      <Link to="/">Home</Link>
-    </header>
+    <Header />
     <div className="app-content">
       {props.children}
     </div>

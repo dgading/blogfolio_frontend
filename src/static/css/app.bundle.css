@@ -7,5 +7,32 @@ font-family: 'Rubik', sans-serif; __body-copy
 */
 html {
   font-size: 16px;
+  color: #FAFAEB;
   font-family: 'Rubik', sans-serif;
+}
+/* Layout */
+body {
+  background-color: #110B11;
+}
+.app-content {
+  width: 80%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.app-header {
+  position: relative;
+}
+.app-header__title {
+  margin-bottom: 0;
+  color: #A5D0A8;
+}
+.app-header__sub-title {
+  display: block;
+}
+.app-header__sub-title--small {
+  font-size: 80%;
+}
+/* Index Page */
+.index-container {
+  font-size: calc(14px + 12 * ((100vw - 300px) / 1300));
 }

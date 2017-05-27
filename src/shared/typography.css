@@ -7,5 +7,6 @@ font-family: 'Rubik', sans-serif; __body-copy
 
 html {
   font-size: 16px;
+  color: var(--floralWhite);
   font-family: 'Rubik', sans-serif;
 }
