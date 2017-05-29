@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import HeaderTitle from './components/HeaderTitle/HeaderTitle';
+
 export const Header = () => (
-  <header className="app-header">
-    <h1 className="app-header__title">Daniel Gading</h1>
-    <span className="app-header__sub-title">A full stack Javascript Developer*</span>
-    <span className="app-header__sub-title--small">Also knows some Drupal and Rails</span>
-  </header>
+  <div className="demo-back">
+    <a className="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="/" title="go back" role="button">
+      <i className="material-icons" role="presentation">arrow_back</i>
+    </a>
+  </div>
 );
 
 export default Header;

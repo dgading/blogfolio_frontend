@@ -1,10 +1,14 @@
 /* Shared */
+@import "shared/shared_class.css";
 @import "shared/typography.css";
 @import "shared/variables.css";
 
 /* Layout */
 @import "components/Layout/layout.css";
 @import "components/Layout/components/Header/header.css";
+@import "components/Layout/components/Header/components/HeaderTitle/header_title.css";
+@import "components/Layout/components/Footer/footer.css";
 
 /* Index Page */
-@import "components/IndexPage/index_page.css"
+@import "components/IndexPage/index_page.css";
+@import "components/AboutPage/about_page.css";

@@ -1,0 +1,19 @@
+.header-title {
+  float: right;
+}
+
+.header-title__title {
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  color: var(--cambridgeBlue);
+}
+.header-title__sub-title {
+  display: block;
+  letter-spacing: 4px;
+  text-transform: lowercase;
+  font-variant: small-caps;
+}
+
+.header-title__sub-title--small {
+  font-size: 80%;
+}
