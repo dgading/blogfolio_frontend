@@ -92,16 +92,16 @@
 
 html {
   height: 100%;
-  /*background-size: 100px 100px;
+  background-size: 100px 100px;
   background-position: -10px -10px;
-  background-image: linear-gradient(to right, rgba(var(--rgbaPewterBlue), 0.3) 1px, transparent 1px), linear-gradient(to bottom, rgba(var(--rgbaPewterBlue), 0.3) 1px, transparent 1px);*/
+  background-image: linear-gradient(to right, rgba(var(--rgbaPewterBlue), 0.3) 1px, transparent 1px), linear-gradient(to bottom, rgba(var(--rgbaPewterBlue), 0.3) 1px, transparent 1px);
 }
 
 body {
   min-height: 100%;
   margin: 0;
   
-  /*background-size: 100px 100px;
-  background-image: linear-gradient(to right, rgba(var(--rgbaPewterBlue), 0.3) 1px, transparent 1px), linear-gradient(to bottom, rgba(var(--rgbaPewterBlue), 0.3) 1px, transparent 1px);*/
+  background-size: 100px 100px;
+  background-image: linear-gradient(to right, rgba(var(--rgbaPewterBlue), 0.3) 1px, transparent 1px), linear-gradient(to bottom, rgba(var(--rgbaPewterBlue), 0.3) 1px, transparent 1px);
 }
 

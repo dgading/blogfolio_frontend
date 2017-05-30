@@ -11,6 +11,7 @@
     "start:dev:universal": "export NODE_ENV=development && export UNIVERSAL=true && npm run start:dev",
     "build": "babel src/server.js --out-file dist/server.js",
     "build:dev": "webpack -d",
+    "build:prod": "webpack -p",
     "build:dev:watch": "webpack -d --watch"
   },
   "repository": {
