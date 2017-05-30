@@ -22,11 +22,11 @@ export default class BasicPage extends React.Component {
 
     return(
       <main className="mdl-layout__content">
-        {currentPath !== '/' && 
+        {/*{currentPath !== '/' && 
           <Header />
-        }
+        }*/}
           {pageContent}
-        <Footer />
+        {/*<Footer />*/}
       </main>
     );
   }

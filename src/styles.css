@@ -5,10 +5,13 @@
 
 /* Layout */
 @import "components/Layout/layout.css";
-@import "components/Layout/components/Header/header.css";
+/*@import "components/Layout/components/Header/header.css";
 @import "components/Layout/components/Header/components/HeaderTitle/header_title.css";
-@import "components/Layout/components/Footer/footer.css";
+@import "components/Layout/components/Footer/footer.css";*/
+
+
 
 /* Index Page */
+@import "components/BasicPage/basic_page.css";
 @import "components/IndexPage/index_page.css";
-@import "components/AboutPage/about_page.css";
+/*@import "components/AboutPage/about_page.css";*/
