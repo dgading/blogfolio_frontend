@@ -1,0 +1,17 @@
+.blog-teaser {
+  padding: 0 10px;
+}
+
+.blog-teaser__title {
+  margin: 0;
+}
+
+.blog-teaser__link {
+  font-family: var(--header-font);
+  color: var(--copperRed);
+  text-decoration: none;
+}
+
+.blog-teaser__link:hover {
+  text-decoration: underline;
+}

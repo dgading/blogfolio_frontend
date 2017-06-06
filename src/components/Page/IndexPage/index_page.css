@@ -1,0 +1,15 @@
+.content-container__content--home {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+
+@media (--small-viewport) {
+  .content-container__content--home{
+    transition: all 5s;
+    flex-direction: column;
+  }
+}
+
+

@@ -1,0 +1,110 @@
+.site-navigation__item--home { grid-area: home; }
+.site-navigation__link--home { background-color: var(--smokyBlack); }
+
+.site-navigation__item--about { grid-area: about; }
+.site-navigation__link--about { background-color: var(--pewterBlue); }
+
+.site-navigation__item--blog { grid-area: blog; }
+.site-navigation__link--blog { background-color: var(--copperRed); }
+
+.site-navigation__item--projects { grid-area: projects; }
+.site-navigation__link--projects { background-color: var(--cambridgeBlue); }
+
+.site-navigation__item--contact { grid-area: contact; }
+.site-navigation__link--contact { background-color: var(--floralWhite); }
+
+
+.site-navigation__link {
+  position: relative;
+  padding: 10px;
+}
+
+.site-navigation__link::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  border: 10px solid var(--smokyBlack);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.navigation-link__inner {
+  @apply --visually-hidden;
+}
+
+.navigation-icon:not(.navigation-icon--home-location) {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation-icon:not(.navigation-icon--home-location) svg {
+  width: 50%;
+  height: 50%;
+  margin: 25%;
+}
+
+.site-navigation--home {
+  background-color: var(--smokyBlack);
+  grid-area: navigation;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "about about blog"
+    "projects home blog"
+    "projects contact contact";
+}
+
+.site-navigation__link--home-location {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.site-navigation--about {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  width: 300px;
+  height: 300px;
+}
+
+.site-navigation__link:not(.site-navigation__link--home-location) {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 0 auto;
+}
+
+.site-navigation__item:not(.site-navigation__item--home-location) {
+  width: 100px;
+  height: 100px;
+  border: none; 
+}
+
+.site-navigation__item--home:not(.site-navigation__item--home-location) {
+  order: 3;
+}
+
+.site-navigation__item--about:not(.site-navigation__item--home-location) {
+  order: 1;
+  flex: 100%;
+}
+
+.site-navigation__item--blog:not(.site-navigation__item--home-location) {
+  order: 4;
+}
+
+.site-navigation__item--projects:not(.site-navigation__item--home-location) {
+  order: 2;
+}
+
+.site-navigation__item--contact:not(.site-navigation__item--home-location) {
+  order: 5;
+  flex: 100%;
+}
+
+

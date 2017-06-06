@@ -1,17 +1,32 @@
 /* Shared */
 @import "shared/shared_class.css";
 @import "shared/typography.css";
-@import "shared/variables.css";
+@import "shared/colors.css";
+@import "shared/media_queries.css";
 
 /* Layout */
 @import "components/Layout/layout.css";
-/*@import "components/Layout/components/Header/header.css";
-@import "components/Layout/components/Header/components/HeaderTitle/header_title.css";
+@import "components/Layout/components/SiteNavigation/site_navigation.css";
+@import "components/Layout/components/Header/header.css";
+/*@import "components/Layout/components/Header/components/HeaderTitle/header_title.css";
 @import "components/Layout/components/Footer/footer.css";*/
 
 
 
 /* Index Page */
-@import "components/BasicPage/basic_page.css";
-@import "components/IndexPage/index_page.css";
-/*@import "components/AboutPage/about_page.css";*/
+@import "components/Page/IndexPage/index_page.css";
+
+/* About */
+@import "components/Page/AboutPage/about_page.css";
+
+/* Contact */
+/*@import "components/Page/ContactPage/contact_page.css";*/
+
+/* Blog */
+/*@import "components/Blog/blog_landing.css";
+@import "components/Blog/blog_single.css";*/
+@import "components/Shared/Blog/blog_teaser.css";
+
+/* Projects */
+/*@import "components/Project/project_landing.css";
+@import "components/Project/project_single.css";*/

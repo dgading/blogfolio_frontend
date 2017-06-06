@@ -1,3 +1,87 @@
+html {
+  height: 100%;
+  background-size: 100px 100px;
+  background-position: -10px -10px;
+  background-image: linear-gradient(to right, rgba(var(--rgbaPewterBlue), 0.3) 1px, transparent 1px), linear-gradient(to bottom, rgba(var(--rgbaPewterBlue), 0.3) 1px, transparent 1px);
+  background-color: var(--floralWhite);
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  background-size: 100px 100px;
+  background-image: linear-gradient(to right, rgba(var(--rgbaPewterBlue), 0.3) 1px, transparent 1px), linear-gradient(to bottom, rgba(var(--rgbaPewterBlue), 0.3) 1px, transparent 1px);
+}
+
 .layout-container {
-  
+  /*height: 100vh;*/
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.content-container {
+  grid-area: content;
+}
+
+.content-container__content {
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.layout-container--home {
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "content content content"
+    "header header header"
+    "navigation navigation navigation";
+}
+
+.layout-container--about {
+  grid-template-rows: auto 1fr 1fr;
+  grid-template-areas:
+    "header content content"
+    "navigation content content"
+    ". content content";
+}
+
+.layout-container--blog {
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas:
+    "navigation content content"
+    "header content content"
+    ". content content";
+}
+
+.layout-container--projects {
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas:
+    "content content content"
+    ". . ."
+    "header header header"
+    "navigation navigation navigation"
+    "navigation navigation navigation"
+    "navigation navigation navigation"
+    "navigation navigation navigation";
+}
+
+.layout-container--contact {
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-areas:
+    "content content content"
+    ". . ."
+    "header header header"
+    "navigation navigation navigation"
+    "navigation navigation navigation"
+    "navigation navigation navigation"
+    "navigation navigation navigation";
+}
+
+@media (--small-viewport) {
+  .layout-container--home {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "content"
+    "navigation";
+    grid-template-rows: auto 1fr 1fr;
+  }
 }

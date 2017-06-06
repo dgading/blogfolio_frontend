@@ -4,11 +4,21 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import styles from './styles.css';
 import { App } from './components/App';
 
-const AppClient = () => (
-  <Router>
-    <App />
-  </Router>
-);
+export class AppClient extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return(
+      <Router>
+        <App />
+      </Router>
+    );
+  }
+}
+
+export default AppClient;
 
 window.onload = () => {
   render (

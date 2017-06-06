@@ -1,14 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types'
+import { withRouter } from 'react-router';
 
-import HeaderTitle from './components/HeaderTitle/HeaderTitle';
+class Header extends React.Component {
+ 
+  static get propTypes() {
+    return {
+      match: PropTypes.object.isRequired,
+      location: PropTypes.object.isRequired,
+      history: PropTypes.object.isRequired
+    }
+  }
+  render() {
+    const currentLocation = this.props.location.pathname;
+    let locationClass = '';
+    if (currentLocation === '/') {
+      locationClass = 'home';
+    } else {
+      locationClass = currentLocation.substr(1);
+    }
+    return(
+      <header className={"site-header site-header--" + locationClass}>
+        <h1 className={"site-header__title site-header__title--" + locationClass}>Daniel Gading</h1>
+        <span className={"site-header__tag site-header__tag--" + locationClass}>A full stack developer</span>
+      </header>
+    );
+  }
+}
 
-export const Header = () => (
-  <div className="demo-back">
-    <a className="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="/" title="go back" role="button">
-      <i className="material-icons" role="presentation">arrow_back</i>
-    </a>
-  </div>
-);
-
-export default Header;
+export default withRouter(Header);
