@@ -3,12 +3,12 @@
   flex-flow: row;
 }
 
-.content-container__header--about {
+.content-header--about {
   order: 2;
   align-self: center;
 }
 
-.content-container__title--about {
+.content-header__title--about {
   transform: rotate(180deg);
   font-size: 60px;
   padding: 0;
@@ -20,4 +20,5 @@
 .content-container__content--about {
   order: 1;
   padding: 0 60px 0 0;
+  flex-basis: 90%;
 }

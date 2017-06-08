@@ -1,6 +1,6 @@
 .site-header {
   grid-area: header;
-  padding: 0 10px;
+  padding: 0 10px 10px;
 }
 
 .site-header__title {

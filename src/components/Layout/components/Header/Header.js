@@ -17,6 +17,8 @@ class Header extends React.Component {
     let locationClass = '';
     if (currentLocation === '/') {
       locationClass = 'home';
+    } else if (currentLocation.indexOf("\/blog\/") >= 0) {
+      locationClass = "blog-post";
     } else {
       locationClass = currentLocation.substr(1);
     }

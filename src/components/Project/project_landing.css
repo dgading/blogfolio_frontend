@@ -1,0 +1,83 @@
+.content-container--projects {
+  display: flex;
+  flex-flow: row;
+}
+
+.content-header--projects {
+  order: 2;
+  align-self: center;
+}
+
+.content-header__title--projects {
+  transform: rotate(180deg);
+  font-size: 60px;
+  padding: 0;
+  margin: 0;
+  white-space:nowrap;
+  writing-mode:tb-rl;
+}
+
+.content-container__content--projects {
+  order: 1;
+  padding: 0 60px 0 0;
+  flex-basis: 90%;
+  align-self: center;
+}
+
+.content-container__announcement--apology {
+  position: relative;
+  padding-right: 15px;
+}
+
+.content-container__announcement--apology::after {
+  content: "\1f648";
+  position: absolute;
+  right: -15px;
+  top: 0;
+}
+
+.content-container__content--projects {
+  padding-top: 15%;
+}
+
+.content-container__announcement {
+  font-size: 3em;
+  display: inline-block;
+}
+
+.announcement-enter {
+  opacity: 0.01;
+}
+
+.announcement-appear {
+  opacity: 0;
+  transform: rotate(720deg) scale(0.25);
+}
+
+.announcement-appear.delay {
+  opacity: 1;
+}
+
+.announcement-appear.announcement-appear-active {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+  transition: all 10s ease-out;
+}
+
+/*.sitenav-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}*/

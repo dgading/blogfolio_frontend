@@ -36,43 +36,38 @@ body {
 }
 
 .layout-container--about {
-  grid-template-rows: auto 1fr 1fr;
+  grid-template-rows: auto 1fr;
   grid-template-areas:
     "header content content"
-    "navigation content content"
-    ". content content";
+    "navigation content content";
 }
 
 .layout-container--blog {
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: auto 1fr;
   grid-template-areas:
-    "navigation content content"
     "header content content"
-    ". content content";
+    "navigation content content";
+}
+
+.layout-container--blog-post {
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "header header header"
+    "navigation content content";
 }
 
 .layout-container--projects {
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: auto 1fr;
   grid-template-areas:
-    "content content content"
-    ". . ."
-    "header header header"
-    "navigation navigation navigation"
-    "navigation navigation navigation"
-    "navigation navigation navigation"
-    "navigation navigation navigation";
+    "header content content"
+    "navigation content content";
 }
 
 .layout-container--contact {
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-rows: auto 1fr;
   grid-template-areas:
-    "content content content"
-    ". . ."
-    "header header header"
-    "navigation navigation navigation"
-    "navigation navigation navigation"
-    "navigation navigation navigation"
-    "navigation navigation navigation";
+    "header content content"
+    "navigation content content";
 }
 
 @media (--small-viewport) {

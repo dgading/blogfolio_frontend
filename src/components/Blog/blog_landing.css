@@ -1,0 +1,47 @@
+.content-container--blog {
+  display: flex;
+  flex-flow: row;
+  counter-reset: section;
+}
+
+.content-container__header--blog {
+  order: 2;
+  align-self: center;
+}
+
+.content-container__title--blog {
+  transform: rotate(180deg);
+  font-size: 60px;
+  padding: 0;
+  margin: 0;
+  white-space:nowrap;
+  writing-mode:tb-rl;
+}
+
+.content-container__content--blog {
+  order: 1;
+  padding: 0 60px 0 0;
+  flex-basis: 90%;
+}
+
+.blog-teaser {
+  counter-increment: section;
+  content: counter(section);
+  transition-delay: counter(section)s;
+}
+
+.blog-landing-enter {
+  opacity: 0.01;
+}
+
+.blog-landing-appear {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.blog-landing-appear.blog-landing-appear-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 1.5s ease-out;
+  
+}

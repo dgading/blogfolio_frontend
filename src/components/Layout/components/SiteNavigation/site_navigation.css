@@ -45,10 +45,9 @@
   height: 50%;
   margin: 25%;
 }
-
+.navigation-container {grid-area: navigation;}
 .site-navigation--home {
   background-color: var(--smokyBlack);
-  grid-area: navigation;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -64,12 +63,21 @@
   height: 100%;
 }
 
-.site-navigation--about {
+.site-navigation--about,
+.site-navigation--blog,
+.site-navigation--projects,
+.site-navigation--contact,
+.site-navigation--blog-post {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   width: 300px;
   height: 300px;
+  margin-left: -100px;
+}
+
+.site-navigation--blog-post {
+  margin-left: 0;
 }
 
 .site-navigation__link:not(.site-navigation__link--home-location) {
@@ -107,4 +115,61 @@
   flex: 100%;
 }
 
+.navigation-icon--home {
+  fill: var(--floralWhite);
+}
 
+/* About */
+.site-navigation--about {
+  transform: rotate(-90deg);
+}
+
+.navigation-icon--about-location {
+  transform: rotate(90deg);
+}
+
+.site-navigation--blog {
+  transform: rotate(180deg);
+}
+
+.navigation-icon--blog-location {
+  transform: rotate(-180deg);
+}
+
+
+.site-navigation--projects {
+  transform: rotate(-0deg);
+}
+
+.navigation-icon--project-location {
+  transform: rotate(0deg);
+}
+
+.site-navigation--contact {
+  transform: rotate(90deg);
+}
+
+.navigation-icon--contact-location {
+  transform: rotate(-90deg);
+}
+
+
+
+/* Animation Styles */
+
+.site-navigation,
+.navigation-icon {
+  transition-duration: 3s;
+}
+
+
+/*.sitenav-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+*/

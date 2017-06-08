@@ -20,13 +20,13 @@
 @import "components/Page/AboutPage/about_page.css";
 
 /* Contact */
-/*@import "components/Page/ContactPage/contact_page.css";*/
+@import "components/Page/ContactPage/contact_page.css";
 
 /* Blog */
-/*@import "components/Blog/blog_landing.css";
-@import "components/Blog/blog_single.css";*/
+@import "components/Blog/blog_landing.css";
+@import "components/Blog/blog_single.css";
 @import "components/Shared/Blog/blog_teaser.css";
 
 /* Projects */
-/*@import "components/Project/project_landing.css";
-@import "components/Project/project_single.css";*/
+@import "components/Project/project_landing.css";
+@import "components/Project/project_single.css";

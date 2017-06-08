@@ -2,8 +2,8 @@ import React from 'react';
 
 export const AboutPage = ({match}) => (  
   <div className={"content-container content-container--" + match.path.substr(1)}>
-    <div className={"content-container__header content-container__header--" + match.path.substr(1)}>
-      <h1 className={"content-container__title content-container__title--" + match.path.substr(1)}>About Me</h1>
+    <div className={"content-header content-header--" + match.path.substr(1)}>
+      <h1 className={"content-header__title content-header__title--" + match.path.substr(1)}>About Me</h1>
     </div>
     <div className={"content-container__content content-container__content--" + match.path.substr(1)}>
       <p>

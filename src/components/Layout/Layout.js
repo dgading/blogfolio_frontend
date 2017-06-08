@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router';
+import { CSSTransitionGroup } from 'react-transition-group'; 
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -22,15 +23,26 @@ export class Layout extends React.Component {
   render(props) {
     const currentLocation = this.props.location.pathname;
     let locationClass = '';
+    let locationKey = 0;
     if (currentLocation === '/') {
       locationClass = 'home';
+      locationKey = 0;
+    } else if (currentLocation.indexOf("\/blog\/") >= 0) {
+      locationClass = "blog-post";
+      locationKey = 1;
     } else {
       locationClass = currentLocation.substr(1);
+      locationKey = 1;
     }
     return(
       <div className={"layout-container layout-container--" + locationClass}>
         <Header />
-        <SiteNavigation />
+        <CSSTransitionGroup component="div" className="navigation-container"
+          transitionName="sitenav"
+          transitionEnterTimeout={500}
+          transitionLeaveTimeout={0}>
+          <SiteNavigation key={locationKey}/>
+        </CSSTransitionGroup>
         {this.props.children}
       </div>
     );

@@ -1,0 +1,24 @@
+.content-container--project-post {
+  display: flex;
+  flex-flow: row;
+}
+
+.content-header--project-post {
+  order: 2;
+  align-self: center;
+}
+
+.content-header__title--project-post {
+  transform: rotate(180deg);
+  font-size: 60px;
+  padding: 0;
+  margin: 0;
+  white-space:nowrap;
+  writing-mode:tb-rl;
+}
+
+.content-container__content--project-post {
+  order: 1;
+  padding: 0 60px 0 0;
+  flex-basis: 90%;
+}
