@@ -1,0 +1,32 @@
+.content-header {
+  @apply --page-title;
+}
+
+.content-header__title {
+  @apply --page-title-text;
+}
+
+@media(--small-viewport) {
+  .content-container--about {
+  display: flex;
+  flex-flow: column;
+  padding: 0 15px;
+  }
+  .content-header {
+    position: relative;
+  }
+  .content-container__content {
+    padding: 0;
+  }
+  .content-header__title {
+    font-family: var(--header-font);
+    color: var(--copperRed);
+    transform: rotate(0);
+    font-size: 50px;
+    line-height: auto;
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    writing-mode: initial;
+  }
+}

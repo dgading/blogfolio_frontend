@@ -37,16 +37,21 @@ class BlogSingle extends React.Component {
     }
     if(this.state.valid === true) {
       return(
-        <div className="content-container content-container--blog-post">
-          <div className="content-header content-header--blog-post">
-            <h1 className="content-header__title content-header__title--blog-post">
+        <div className="blog-post-container">
+          <div className="blog-post-header">
+            <h1 className="blog-post-header__title">
               {this.state.title}
             </h1>
-            <span className="content-header__date--blog-post">{this.state.postDate}</span>
+            <span className="blog-post-header__date">{this.state.postDate}</span>
           </div>
           <div>
-          <div className="content-container__content content-container__content--blog-post"
+          <div className="blog-post-container__content"
                dangerouslySetInnerHTML={createPostContent (postContent)} />
+          </div>
+          <div className="content-header content-header--blog-post">
+            <span className="content-header__title content-header__title--blog-post">
+              Blog
+            </span>
           </div>
         </div>
       );

@@ -10,14 +10,13 @@
 @import "components/Layout/components/Header/header.css";
 /*@import "components/Layout/components/Header/components/HeaderTitle/header_title.css";
 @import "components/Layout/components/Footer/footer.css";*/
-
-
+@import "components/Shared/PageId/page_id.css";
 
 /* Index Page */
 @import "components/Page/IndexPage/index_page.css";
 
 /* About */
-@import "components/Page/AboutPage/about_page.css";
+/*@import "components/Page/AboutPage/about_page.css";*/
 
 /* Contact */
 @import "components/Page/ContactPage/contact_page.css";

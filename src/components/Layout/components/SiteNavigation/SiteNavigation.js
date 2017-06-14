@@ -39,7 +39,8 @@ class SiteNavigation extends React.Component {
           return (
             <div 
               key={i} 
-              className={"site-navigation__item site-navigation__item--" + (link.title).toLowerCase() + " site-navigation__item--" + locationClass + "-location"}>
+              className={"site-navigation__item site-navigation__item--" + (link.title).toLowerCase() + 
+                        " site-navigation__item--" + locationClass + "-location" + " site-navigation__" + (link.title).toLowerCase() + "--" + locationClass + "-location"}>
               <NavLink 
                 to={(link.path).toLowerCase()} 
                 className={"site-navigation__link site-navigation__link--" + (link.title).toLowerCase() + " site-navigation__link--" + locationClass + "-location"}>

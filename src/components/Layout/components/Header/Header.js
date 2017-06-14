@@ -25,7 +25,7 @@ class Header extends React.Component {
     return(
       <header className={"site-header site-header--" + locationClass}>
         <h1 className={"site-header__title site-header__title--" + locationClass}>Daniel Gading</h1>
-        <span className={"site-header__tag site-header__tag--" + locationClass}>A full stack developer</span>
+        <span className={"site-header__tag site-header__tag--" + locationClass}>Full Stack Developer</span>
       </header>
     );
   }

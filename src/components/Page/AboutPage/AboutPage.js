@@ -1,22 +1,24 @@
 import React from 'react';
+import PageId from '../../Shared/PageId/PageId';
 
 export const AboutPage = ({match}) => (  
   <div className={"content-container content-container--" + match.path.substr(1)}>
-    <div className={"content-header content-header--" + match.path.substr(1)}>
-      <h1 className={"content-header__title content-header__title--" + match.path.substr(1)}>About Me</h1>
-    </div>
+    <PageId pathname={match.path.substr(1)} title={"About Me"} />
     <div className={"content-container__content content-container__content--" + match.path.substr(1)}>
       <p>
-        Fixie disrupt typewriter lomo. Tilde vegan crucifix intelligentsia polaroid small batch squid, stumptown humblebrag viral narwhal raw denim godard mlkshk. Cliche forage DIY, kogi cardigan live-edge try-hard. Hell of vinyl air plant, iceland kitsch cred hot chicken locavore +1 humblebrag prism occupy fashion axe activated charcoal. Paleo flexitarian four loko, man braid hell of organic hoodie helvetica squid craft beer bicycle rights. Pok pok plaid chicharrones, vinyl drinking vinegar ennui organic try-hard four dollar toast farm-to-table authentic viral shabby chic brooklyn fixie. +1 fashion axe humblebrag echo park 3 wolf moon art party, hammock pitchfork. 
+        Hi! If you weren't sure from the URL, I'm Daniel Gading a full stack web developer mainly working with Javascript, PHP, and Drupal -- along with their corresponding stacks.  
       </p>
       <p>
-        Celiac marfa tumblr sartorial. Post-ironic vaporware irony, stumptown kinfolk selfies ennui. Bitters kogi scenester squid shabby chic. Hexagon schlitz gochujang messenger bag, af biodiesel williamsburg try-hard iceland kale chips tattooed street art taxidermy swag. Synth art party blue bottle occupy tousled, XOXO hexagon tilde swag pinterest. Gentrify messenger bag kitsch, skateboard gastropub shabby chic sriracha seitan direct trade blue bottle keffiyeh raclette scenester marfa keytar. Knausgaard ethical chartreuse air plant.
+        Most of my recent work has been using Drupal, working mainly with the Drupal API to create custom tools and builds for clients at. In my free time I'm always playing with newest hot thing, which ranges from JS frameworks to VR in the Unity framework using C#.
       </p>
       <p>
-        Artisan kinfolk air plant iPhone readymade copper mug before they sold out hammock, fam lomo YOLO flannel truffaut. Fashion axe tacos keffiyeh gentrify health goth microdosing man braid coloring book. Asymmetrical neutra portland, thundercats single-origin coffee squid seitan pickled cray poutine. Bitters farm-to-table biodiesel, knausgaard vinyl brunch portland vexillologist crucifix scenester. Butcher etsy next level try-hard venmo. Normcore iceland bitters, unicorn cold-pressed crucifix selfies lo-fi retro jean shorts squid. Enamel pin vice gluten-free, farm-to-table helvetica church-key kinfolk poutine lyft gentrify mumblecore mixtape raw denim.
+        After many iterations of personal sites including Wordpress, Drupal, and BoltCMS, I decided on this one. It is completely built with React and has allowed me to play with all the new stuff out there while also putting something I'm proud of on the web. There are a few parts to this site which in include blog posts and the projects. Blog posts will normally be one shot ideas or cool tricks. While the Projects will be bigger builds with Github repos and usually have multiple blog posts showing off the different parts of the project. 
       </p>
       <p>
-        Kitsch humblebrag listicle shoreditch man braid hexagon, hella fanny pack roof party coloring book taxidermy selvage vape knausgaard. Stumptown banh mi vexillologist bitters, whatever authentic semiotics narwhal health goth. Tattooed pinterest intelligentsia iPhone chillwave lumbersexual seitan, cronut plaid glossier live-edge vice helvetica ugh. Raw denim fashion axe glossier viral roof party butcher. Church-key thundercats pabst vaporware asymmetrical, ramps listicle sriracha shaman salvia. Wayfarers salvia 3 wolf moon cold-pressed heirloom, ugh meggings food truck air plant DIY tattooed cardigan distillery sartorial austin. +1 YOLO meggings kale chips mumblecore, mlkshk paleo you probably haven't heard of them leggings dreamcatcher messenger bag pabst palo santo.
+        You can check out more at this site's project, but it is currently React with an Express/Mongo backend all hosted on an Ubuntu 16.04 droplet at Digital Ocean.
+      </p>
+      <p>
+        On the Contact page, I've listed some of the best ways to get in touch if you have any questions or would like to discuss any future projects. 
       </p>
     </div>
   </div>

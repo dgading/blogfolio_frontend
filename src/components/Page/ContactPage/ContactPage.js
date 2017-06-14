@@ -1,4 +1,5 @@
 import React from 'react';
+import PageId from '../../Shared/PageId/PageId';
 
 import svgIcons from '../../../data/icons.json';
 
@@ -11,9 +12,7 @@ const contactLinks = [
 
 export const ContactPage = ({match}) => (
   <div className={"content-container content-container--" + match.path.substr(1)}>
-    <div className={"content-header content-header--" + match.path.substr(1)}>
-      <h1 className={"content-header__title content-header__title--" + match.path.substr(1)}>Contact</h1>
-    </div>
+    <PageId pathname={match.path.substr(1)} title={"Contact"} />
     <div className={"content-container__content content-container__content--" + match.path.substr(1)}>
       <ul className="contact__item-container">
         {contactLinks.map(function(contactLink, i) {

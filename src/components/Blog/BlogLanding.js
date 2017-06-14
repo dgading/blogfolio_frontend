@@ -1,5 +1,6 @@
 import React from 'react';
 import { CSSTransitionGroup } from 'react-transition-group';
+import PageId from '../Shared/PageId/PageId';
 import BlogTeaser from '../Shared/Blog/BlogTeaser';
 
 import blogData from '../../data/blog-posts.json';
@@ -14,9 +15,7 @@ const postList = blogData.map((data) =>
 
 export const BlogLanding = ({match}) => (
   <div className={"content-container content-container--" + match.path.substr(1)}>
-    <div className={"content-container__header content-container__header--" + match.path.substr(1)}>
-      <h1 className={"content-container__title content-container__title--" + match.path.substr(1)}>Blog</h1>
-    </div>
+    <PageId pathname={match.path.substr(1)} title={"Blog"} />
     <CSSTransitionGroup component="div" className={"content-container__content content-container__content--" + match.path.substr(1)}
         transitionName="blog-landing"
         transitionAppear={true}

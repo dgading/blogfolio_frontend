@@ -1,29 +1,3 @@
-.content-container--projects {
-  display: flex;
-  flex-flow: row;
-}
-
-.content-header--projects {
-  order: 2;
-  align-self: center;
-}
-
-.content-header__title--projects {
-  transform: rotate(180deg);
-  font-size: 60px;
-  padding: 0;
-  margin: 0;
-  white-space:nowrap;
-  writing-mode:tb-rl;
-}
-
-.content-container__content--projects {
-  order: 1;
-  padding: 0 60px 0 0;
-  flex-basis: 90%;
-  align-self: center;
-}
-
 .content-container__announcement--apology {
   position: relative;
   padding-right: 15px;

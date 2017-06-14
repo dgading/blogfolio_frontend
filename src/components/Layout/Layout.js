@@ -26,7 +26,7 @@ export class Layout extends React.Component {
     let locationKey = 0;
     if (currentLocation === '/') {
       locationClass = 'home';
-      locationKey = 0;
+      locationKey = 1;
     } else if (currentLocation.indexOf("\/blog\/") >= 0) {
       locationClass = "blog-post";
       locationKey = 1;
@@ -39,8 +39,11 @@ export class Layout extends React.Component {
         <Header />
         <CSSTransitionGroup component="div" className="navigation-container"
           transitionName="sitenav"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={0}>
+          transitionAppear={true}
+          transitionAppearTimeout={500}
+          transitionEnter={true}
+          transitionEnterTimeout={0}
+          transitionLeave={false}>
           <SiteNavigation key={locationKey}/>
         </CSSTransitionGroup>
         {this.props.children}

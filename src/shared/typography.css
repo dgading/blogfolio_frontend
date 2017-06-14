@@ -8,6 +8,22 @@ font-family: 'Rubik', sans-serif; __body-copy
 :root {
   --header-font: 'Trirong', serif;
   --body-font: 'Rubik', sans-serif;
+  --page-title {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  };
+  --page-title-text {
+    color: rgba(var(--rgbaSmokyBlack), .3);
+    transform: rotate(180deg);
+    font-size: 170px;
+    line-height: 107px;
+    padding: 0;
+    margin: 0;
+    white-space:nowrap;
+    writing-mode:tb-rl;
+  }
 }
 
 html {
@@ -15,3 +31,4 @@ html {
   color: var(--smokyBlack);
   font-family: var(--body-font);
 }
+

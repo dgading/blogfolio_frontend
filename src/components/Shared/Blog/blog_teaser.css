@@ -7,11 +7,15 @@
 }
 
 .blog-teaser__link {
+  margin-bottom: 10px;
   font-family: var(--header-font);
   color: var(--copperRed);
-  text-decoration: none;
+  text-decoration: none; 
+  line-height: 130%;
+  display: inline-block;
+  transition: all .2s ease-in-out;
 }
 
 .blog-teaser__link:hover {
-  text-decoration: underline;
+  transform: scale(1.2);
 }
