@@ -1,0 +1,24 @@
+.fish-tank {
+  background-color: blue;
+  width: 100%;
+  height: 80vh;
+  display: block;
+  position: relative;
+}
+
+.layout-container--fish-tank {
+  display: block;
+}
+
+.layout-container--fish-tank .navigation-container {
+  display: none;
+}
+
+.fish-tank__fish {
+  position: absolute;
+  width: 200px;
+  top: 10px;
+  left: 0;
+  display: block;
+  transition: all 5s linear;
+}

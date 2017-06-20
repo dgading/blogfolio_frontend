@@ -29,3 +29,6 @@
 /* Projects */
 @import "components/Project/project_landing.css";
 @import "components/Project/project_single.css";
+
+
+@import "components/FishTank/fish_tank.css";
