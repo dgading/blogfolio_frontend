@@ -7,15 +7,18 @@ export class FishTank extends React.Component {
     super(props);
     this.state = {};
   }
-  
+
   componentDidMount() {
     this.setState({fish: FishSVG.hammerhead});
   }
 
   render() {
     return(
-      <div className="fish-tank">
-        <Fish fishType={this.state.fish}/>
+      <div className="fish-tank-container">
+        <div className="fish-tank">
+          <Fish fishType={this.state.fish}/>
+        </div>
+        <p><a href="http://www.flaticon.com/authors/freepik">Fish designed by freepik from Flaticon</a></p>
       </div>
     );
   }
