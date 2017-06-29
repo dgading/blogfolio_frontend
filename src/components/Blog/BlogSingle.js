@@ -11,9 +11,8 @@ class BlogSingle extends React.Component {
 
   componentDidMount(props) {
   const title = this.props.match.params.title.replace(/-/g, '%20').toLowerCase()
-  axios.get('dataSources.singlePost' + title)
+  axios.get(dataSources.singlePost + title)
     .then(res => {
-      
       const data = res.data.data[0];
         this.setState({ 
           valid: true,
