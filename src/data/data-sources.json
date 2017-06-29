@@ -1,0 +1,4 @@
+{
+  "allPosts": "https://api.danielgading.com/jsonapi/node/article",
+  "singlePost": "https://api.danielgading.com/jsonapi/node/article?filter[title][value]="
+}
