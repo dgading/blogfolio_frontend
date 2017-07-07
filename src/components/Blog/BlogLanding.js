@@ -18,7 +18,9 @@ class BlogLanding extends React.Component {
   componentDidMount() {
     axios.get(dataSources.allPosts)
       .then(res => {
+        
         const posts = res.data.data.map(obj => obj );
+        console.log(posts);
         this.setState({ posts });
       });
   }

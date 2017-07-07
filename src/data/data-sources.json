@@ -1,4 +1,7 @@
 {
-  "allPosts": "https://api.danielgading.com/jsonapi/node/article",
-  "singlePost": "https://api.danielgading.com/jsonapi/node/article?filter[title][value]="
+  "allPosts": "https://api.danielgading.com/jsonapi/node/article?filter[status][value]=1",
+  "singlePost": "https://api.danielgading.com/jsonapi/node/article?filter[status][value]=1&filter[title][value]=",
+  "allProjects": "https://api.danielgading.com/jsonapi/node/project?filter[status][value]=1",
+  "singleProject": "https://api.danielgading.com/jsonapi/node/project?filter[status][value]=1&filter[title][value]=",
+  "projectPosts": "https://api.danielgading.com/jsonapi/node/article?filter[status][value]=1&filter[field_project.uuid][value]="
 }

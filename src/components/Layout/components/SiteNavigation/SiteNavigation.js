@@ -29,6 +29,8 @@ class SiteNavigation extends React.Component {
       locationClass = 'home';
     } else if (currentLocation.indexOf("\/blog\/") >= 0) {
       locationClass = "blog-post";
+    } else if (currentLocation.indexOf("\/projects\/") >= 0) {
+      locationClass = "single-project";
     } else {
       locationClass = currentLocation.substr(1);
     }

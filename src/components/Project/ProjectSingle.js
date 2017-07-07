@@ -1,25 +1,71 @@
 import React from 'react';
+import dataSources from '../../data/data-sources.json';
+import axios from 'axios';
+import BlogTeaser from '../Shared/Blog/BlogTeaser';
 
-export const ProjectSingle = ({match}) => (
-  <div className={"content-container content-container--" + match.path.substr(1)}>
-    <div className={"content-container__header content-container__header--" + match.path.substr(1)}>
-      <h1 className={"content-container__title content-container__title--" + match.path.substr(1)}>About Me</h1>
-    </div>
-    <div className={"content-container__content content-container__content--" + match.path.substr(1)}>
-      <p>
-        Fixie disrupt typewriter lomo. Tilde vegan crucifix intelligentsia polaroid small batch squid, stumptown humblebrag viral narwhal raw denim godard mlkshk. Cliche forage DIY, kogi cardigan live-edge try-hard. Hell of vinyl air plant, iceland kitsch cred hot chicken locavore +1 humblebrag prism occupy fashion axe activated charcoal. Paleo flexitarian four loko, man braid hell of organic hoodie helvetica squid craft beer bicycle rights. Pok pok plaid chicharrones, vinyl drinking vinegar ennui organic try-hard four dollar toast farm-to-table authentic viral shabby chic brooklyn fixie. +1 fashion axe humblebrag echo park 3 wolf moon art party, hammock pitchfork. 
-      </p>
-      <p>
-        Celiac marfa tumblr sartorial. Post-ironic vaporware irony, stumptown kinfolk selfies ennui. Bitters kogi scenester squid shabby chic. Hexagon schlitz gochujang messenger bag, af biodiesel williamsburg try-hard iceland kale chips tattooed street art taxidermy swag. Synth art party blue bottle occupy tousled, XOXO hexagon tilde swag pinterest. Gentrify messenger bag kitsch, skateboard gastropub shabby chic sriracha seitan direct trade blue bottle keffiyeh raclette scenester marfa keytar. Knausgaard ethical chartreuse air plant.
-      </p>
-      <p>
-        Artisan kinfolk air plant iPhone readymade copper mug before they sold out hammock, fam lomo YOLO flannel truffaut. Fashion axe tacos keffiyeh gentrify health goth microdosing man braid coloring book. Asymmetrical neutra portland, thundercats single-origin coffee squid seitan pickled cray poutine. Bitters farm-to-table biodiesel, knausgaard vinyl brunch portland vexillologist crucifix scenester. Butcher etsy next level try-hard venmo. Normcore iceland bitters, unicorn cold-pressed crucifix selfies lo-fi retro jean shorts squid. Enamel pin vice gluten-free, farm-to-table helvetica church-key kinfolk poutine lyft gentrify mumblecore mixtape raw denim.
-      </p>
-      <p>
-        Kitsch humblebrag listicle shoreditch man braid hexagon, hella fanny pack roof party coloring book taxidermy selvage vape knausgaard. Stumptown banh mi vexillologist bitters, whatever authentic semiotics narwhal health goth. Tattooed pinterest intelligentsia iPhone chillwave lumbersexual seitan, cronut plaid glossier live-edge vice helvetica ugh. Raw denim fashion axe glossier viral roof party butcher. Church-key thundercats pabst vaporware asymmetrical, ramps listicle sriracha shaman salvia. Wayfarers salvia 3 wolf moon cold-pressed heirloom, ugh meggings food truck air plant DIY tattooed cardigan distillery sartorial austin. +1 YOLO meggings kale chips mumblecore, mlkshk paleo you probably haven't heard of them leggings dreamcatcher messenger bag pabst palo santo.
-      </p>
-    </div>
-  </div>
-);
+class ProjectSingle extends React.Component {
+  constructor(props, {match}) {
+    super(props);
+    this.state = {singleProject: {}, posts: []}
+  }
+
+  componentDidMount(props) {
+  const title = this.props.match.params.title.replace(/-/g, '%20').toLowerCase();  
+  axios.get(dataSources.singleProject + title)
+    .then(res => {
+      const data = res.data.data[0];
+        this.setState({ 
+          valid: true,
+          title: data.attributes.title,
+          content: data.attributes.body.value,
+          date: data.attributes.field_date,
+          posts: []
+        });
+        return axios.get(dataSources.projectPosts + data.id);
+      }).then((response) => {
+        const posts = response.data.data.map(obj => obj );
+        this.setState({ posts: posts });
+      });
+      
+    }
+
+  render() {
+    const projectContent = this.state.content;
+    
+    function createProjectContent(dangerousContent) {
+      return {__html: dangerousContent};
+    }
+    if(true === true) {
+      return(
+        <div className="single-project-container">
+          <div className="single-project-header">
+            <h1 className="single-project-header__title">
+              { this.state.title }
+            </h1>
+            <span className="single-project-header__date">
+              { this.state.date }
+            </span>
+          </div>
+          <div>
+            <div className="single-project-container__content"
+               dangerouslySetInnerHTML={createProjectContent (projectContent)} />
+          </div>
+          <div className="content-header content-header--single-project">
+            <span className="content-header__title content-header__title--single-project">
+              Projects
+            </span>
+          </div>
+          { this.state.posts.map(post =>
+              <BlogTeaser key={post.attributes.nid}
+              title={post.attributes.title}
+              slug={post.attributes.title.replace(/\s+/g, '-').toLowerCase()}
+              date={post.attributes.field_date} 
+              summary={post.attributes.body.summary} />
+            )}
+        </div>
+      );
+    } 
+  }
+}
 
 export default ProjectSingle;

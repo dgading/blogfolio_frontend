@@ -30,6 +30,9 @@ export class Layout extends React.Component {
     } else if (currentLocation.indexOf("\/blog\/") >= 0) {
       locationClass = "blog-post";
       locationKey = 1;
+    } else if (currentLocation.indexOf("\/projects\/") >= 0) {
+      locationClass = "single-project";
+      locationKey = 1;
     } else {
       locationClass = currentLocation.substr(1);
       locationKey = 1;

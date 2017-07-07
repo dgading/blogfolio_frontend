@@ -1,0 +1,21 @@
+.project-teaser {
+  padding: 0 10px;
+}
+
+.project-teaser__title {
+  margin: 0;
+}
+
+.project-teaser__link {
+  margin-bottom: 10px;
+  font-family: var(--header-font);
+  color: var(--copperRed);
+  text-decoration: none; 
+  line-height: 130%;
+  display: inline-block;
+  transition: all .2s ease-in-out;
+}
+
+.project-teaser__link:hover {
+  transform: scale(1.2);
+}

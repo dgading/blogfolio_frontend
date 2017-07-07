@@ -128,6 +128,7 @@
 .site-navigation--about,
 .site-navigation--blog,
 .site-navigation--projects,
+.site-navigation--single-project,
 .site-navigation--contact,
 .site-navigation--blog-post {
   position: relative;
@@ -136,7 +137,8 @@
   margin-left: -100px;
 }
 
-.site-navigation--blog-post {
+.site-navigation--blog-post,
+.site-navigation--single-project {
   margin-left: 0;
 }
 
@@ -145,7 +147,8 @@
   .site-navigation--blog,
   .site-navigation--projects,
   .site-navigation--contact,
-  .site-navigation--blog-post {
+  .site-navigation--blog-post,
+  .site-navigation--single-project {
     margin: 0 auto;
   }
   
