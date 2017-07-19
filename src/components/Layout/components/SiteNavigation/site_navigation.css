@@ -61,7 +61,7 @@
   position: absolute;
   top: 32%;
   left: 34%;
-  z-index: 5;
+  z-index: 7;
 }
 .site-navigation__about--home-location {
   width: 66%;
@@ -241,13 +241,22 @@
 }
 
 
-/*.sitenav-enter {
+.sitenav-enter {
   opacity: 0.01;
 }
 
-.example-enter.example-enter-active {
+.sitenav-enter.sitenav-enter-active {
   opacity: 1;
   transition: opacity 500ms ease-in;
 }
 
-*/
+.sitenav-enter {
+  opacity: 0.01;
+}
+
+.sitenav-enter.sitenav-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+

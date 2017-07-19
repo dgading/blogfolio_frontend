@@ -2,6 +2,10 @@
   padding: 0 10px;
 }
 
+.content-container__content--home .blog-teaser {
+  width: 30%;
+}
+
 .blog-teaser__title {
   margin: 0;
 }

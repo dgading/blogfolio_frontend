@@ -31,9 +31,8 @@ body {
 .layout-container--home {
   grid-template-rows: 1fr auto 1fr;
   grid-template-areas:
-    "content content content"
-    "header header header"
-    "navigation navigation navigation";
+    "navigation header header"
+    "content content content";
 }
 
 .layout-container--about,

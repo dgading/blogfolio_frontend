@@ -43,10 +43,11 @@ export class Layout extends React.Component {
         <CSSTransitionGroup component="div" className="navigation-container"
           transitionName="sitenav"
           transitionAppear={true}
-          transitionAppearTimeout={500}
+          transitionAppearTimeout={0}
           transitionEnter={true}
           transitionEnterTimeout={0}
-          transitionLeave={false}>
+          transitionLeave={true}>
+          transitionLeaveTimeout={0}
           <SiteNavigation key={locationKey}/>
         </CSSTransitionGroup>
         {this.props.children}

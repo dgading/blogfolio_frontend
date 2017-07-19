@@ -55,6 +55,7 @@ class ProjectSingle extends React.Component {
               Projects
             </span>
           </div>
+          <h2>Related Blog Posts</h2> 
           { this.state.posts.map(post =>
               <BlogTeaser key={post.attributes.nid}
               title={post.attributes.title}
